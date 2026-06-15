@@ -6,7 +6,7 @@ const cors = require("cors");
 app.use(cors());
 
 app.use(express.json());
-
+app.use(express.static("dist"));
 const requestLogger = (request, response, next) => {
   console.log("method: ", request.method);
   console.log("Path: ", request.path);
